@@ -15,6 +15,7 @@ html {
     color: var(--font-color); /* Set default font color */
     border-style: none;
     font-family: "Karla";
+    background-image: url('bg-img.jpg');
 }
 
 :root {
