@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+html {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    height: 100%;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    background-color: var(--bg-color); /* Set default background color */
+    color: var(--font-color); /* Set default font color */
+    border-style: none;
+    font-family: "Karla";
+}
+
+:root {
+    --font-color: #0f0f0f;
+    --bg-color: #1C1C1C;
+}
+
+:root {
+    --font-color: #0f0f0f;
+    --bg-color: #fefefe;
+}
+
+[data-theme="dark"] {
+    --font-color: #fefefe; /* White font color for dark theme */
+    --bg-color: #1C1C1C; /* Dark background color for dark theme */
+}
+
+[data-theme="dark"] .container {
+    background-color: #1F2937; /* Dark background color for container in dark theme */
+    color: #ECFDF5;
+}
+
+[data-theme="light"] .container {
+    background-color: #ECFDF5; /* Light background color for container in light theme */
+    color: #0f0f0f;
+}
+
+[data-theme="light"] .line1 {
+    color: #0f0f0f;
+}
+
+[data-theme="light"] .line3 {
+    color: #828282;
+}
+
+.switch {
+    position: absolute;
+    height: 100px;
+    right: 35px;
+    top: 30px;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    border: 1px;
+    border-color: #fefefe;
+    border-style: none;
+}
+
+.slider:before {
+    background-color: #fff;
+    background-image: url('sun-icon.svg'); /* Sun icon for light theme */
+    background-size: cover;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: #2b2b2b; /* Dark background color for slider in checked state */
+}
+
+input:checked + .slider:before {
+    background-image: url('moon-icon.svg'); /* Moon icon for dark theme */
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+
+.container {
+    border: 30px;
+    margin: 0 auto;
+    background-color: #2963b5; /* Dark background color for container */
+    color: white; /* White font color for container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    left: 62px;
+    top: 64px;
+}
+
+/* Heading */
+.line1, .line2, .line3{
+    
+    font-family: "Karla", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 40px;
+    /* or 100% */
+    letter-spacing: -0.025em;
+    position: absolute;
+   
+}
+
+.line1{
+    width: 354px;
+    height: 80px;
+    left: 52px;
+    top: 70px;
+    color: #FFFFFF;
+}
+
+.line2{
+    width: 354px;
+    height: 80px;
+    left: 52px;
+    top: 110px;
+    color: #4ADF86;
+}
+
+.line3{
+    position: absolute;
+    width: 372px;
+    height: 28px;
+    left: 52px;
+    top: 160px;
+    padding-bottom: 0px;
+
+    /* text-xl/leading-7/font-normal */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    /* identical to box height, or 140% */
+
+    /* Medium grey */
+    color: #D5D4D8;
+    font-family: "Inter", calibri;
+}
+
+.copy-container {
+    left: 52px;
+    top: 70px;
+    width: 211px;
+    height: 30px;
+    background: #273549;
+    border-radius: 6px;
+    border-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.copy-text:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.copy-text {
+    line-height: 30px;
+    margin-left: 10px;
+    flex-grow: 1; /* Add this line to allow the text to take up available space */
+    overflow: hidden; /* Add this line to hide any overflowing text */
+    text-overflow: ellipsis; /* Add this line to show an ellipsis for overflowing text */
+    white-space: nowrap; /* Add this line to prevent the text from wrapping to a new line */
+}
+
+.copy-button {
+    margin-right: 10px;
+}
+
+
+
+button{
+    background-color: #10B981;
+    font-family: "Karla";
+    font-weight: 400;
+    font-size: ;
+    border-radius: 6px;
+    border: none;
+    color: #FFFFFF;
+    padding: 9px 17px 9px 15px;
+    gap: 12px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    z-index: 1;
+}
+
+
+button:hover, input:hover{
+    opacity: 0.8;
+}
+
+button:active, input:active{
+    opacity: 0.6;
+}
+
+input:focus{
+    filter: drop-shadow(8px);
+    outline: none;
+}
+
+input[type="checkbox"]::before {
+    content: ''; /* Empty content */
+    display: block;
+    width: 12px; /* Tick width */
+    height: 6px; /* Tick height */
+    border-left: 2px solid white; /* Tick color */
+    border-bottom: 2px solid white; /* Tick color */
+    transform: rotate(-45deg); /* Rotate tick */
+    position: absolute;
+    top: 5px; /* Adjust position */
+    left: 6px; /* Adjust position */
+    opacity: 0; /* Hide tick by default */
+    background-color: #0f0f0f;
+    border-color: #1C1C1C;
+}
+
+.rect{
+    width: 211px;
+    height: 30px;
+
+    background: #273549;
+    border-radius: 6px;
+    border-style: none;
+    color: white;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Remove default Firefox styling */
+    -webkit-appearance: none; /* Remove default Chrome/Safari styling */
+    appearance: none; /* Remove default styling */
+    position: relative;
+    padding-right: 20px; /* Space for custom arrows */
+    padding-left: 10px;
+    width: 100px; /* Adjust width as needed */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    display: none; /* Hide the default arrows */
+}
+
+.number-input-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.number-input-wrapper::after,
+.number-input-wrapper::before {
+    content: '';
+    position: absolute;
+    right: 5px;
+    width: 10px;
+    height: 10px;
+    background-size: 100%;
+    cursor: pointer;
+}
+
+.number-input-wrapper::after {
+    top: 35%;
+    background: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"%3E%3Cpath fill="%23333366" d="M7 10l5-5 5 5H7z"%3E%3C/path%3E%3C/svg%3E') no-repeat center center;
+}
+
+.number-input-wrapper::before {
+    bottom: 35%;
+    background: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"%3E%3Cpath fill="%23333366" d="M7 10l5 5 5-5H7z"%3E%3C/path%3E%3C/svg%3E') no-repeat center center;
+}
+
+
+.grid-container {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* Space between items */
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+
+.password, .copy-container{
+    padding: 10px;
+    color: #D5D4D8;
+}
+
+
+
+.sel{
+    width: 10;
+    padding: 40px;
+
+}
+
+.gen{
+    flex: 2 ;    
+}
+
+.generator{
+    position: absolute;
+    width: 600px;
+    height: 28px;
+    left: 20px;
+    top: 210px;
+}
+
+.password{
+    left: 234px;
+    top: 3240px;
+    margin-top: -15px;
+    color: #D5D4D8;
+}
+
+
+
+/* Button */
+
+/* Auto layout */
+/* display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 9px 17px 9px 15px;
+gap: 12px;
+
+position: absolute;
+width: 191px;
+height: 42px;
+left: 52px;
+top: 284px;
+
+background: #10B981;
+/* shadow/sm */
+/* box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+border-radius: 6px; */ 
+
+
+
+
+/* Rectangle 99 */
+
+/* position: absolute;
+width: 211px;
+height: 39px;
+left: 52px;
+top: 396px;
+
+background: #273549;
+border-radius: 6px; */
