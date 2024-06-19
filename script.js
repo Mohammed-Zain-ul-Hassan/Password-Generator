@@ -24,6 +24,19 @@ function symState(){
     else symbols = true;
 }
 
+$(function() {
+    $( ".slider" ).slider({
+        range: "min",
+        value: 6,
+        min: 6,
+        max: 15,
+        slide: function( event, ui ) {
+            $( "#len" ).val( ui.value );
+        }
+    });
+});
+
+
 function generate(){
     pass1 = "", pass2 = "";
     while(pass1.length < passLen || pass2.length  < passLen){
