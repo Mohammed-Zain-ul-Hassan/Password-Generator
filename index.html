@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark/Light Mode Toggle</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="switch grid-item">
+          <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+          </label>
+        </div>
+        <span class="line1 grid-item">Generate a</span><br>
+        <span class="line2 grid-item">random password</span><br>
+        <span class="line3 grid-item">Never use an insecure password ever again.</span><br>
+        <div class="generator">
+            <div class="sel">
+                <label for="len" class="grid-item">Choose Password Length:</label>
+                <input type="number" id="len" name="len" min="6" max="15" class="rect">
+                <div class="numsym">
+                        <label for="numbers" class="grid-item">Numbers:</label>
+                        <input type="checkbox" id="numbers" name="numbers" onclick="numState()"><br>
+                        <label for="symbols" class="grid-item">Symbols:</label>
+                        <input type="checkbox" id="symbols" name="symbols" onclick="symState()"><br>
+                </div><br>
+                <button class="gen" onclick="generate()">Generate</button>
+            </div>
+            <div class="password grid-item">
+                <div class="copy-container rect">
+                    <span id="pass1" class="copy-text grid-item"></span>
+                    <button class="copy-button" data-copy-target="pass1">Copy</button>
+                </div><br>
+                <div class="copy-container rect">
+                    <span id="pass2" class="copy-text grid-item"></span>
+                    <button class="copy-button" data-copy-target="pass2">Copy</button>
+                </div>
+            </div>
+        </div>
+      </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
