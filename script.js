@@ -26,6 +26,7 @@ function symState(){
 
 function generate(){
     pass1 = "", pass2 = "";
+    if(passLen >= 6 && passLen <= 15){
     while(pass1.length < passLen || pass2.length  < passLen){
         if(pass1.length <= passLen){
             let idx = Math.floor(Math.random()*characters.length);
@@ -52,6 +53,7 @@ function generate(){
             }else if (numbers === false && isNaN(characters[idx]) && symbols === false && !Symbols.includes(characters[idx])){
                 pass2 += characters[idx];
             }
+        }
         }
     }
     document.getElementById("pass1").textContent = pass1;
