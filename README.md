@@ -1,6 +1,6 @@
 # Password Generator 🔐
 
-A simple and customizable password generator built with HTML, CSS, and JavaScript.
+A simple and customizable password generator built with HTML, CSS, and JavaScript. The cool thing is that it's one of the first projects that I built.
 
 ## Features ✨
 
